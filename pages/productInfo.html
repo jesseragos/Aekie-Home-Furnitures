@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>Aekie Home Furnitures</title>
+				
+		<link rel="stylesheet" href="../utils/stylesheets/w3.css">
+		<link rel="stylesheet" href="../utils/stylesheets/aekiestyle.css">
+		<link rel="stylesheet" href="../utils/stylesheets/animate.css">
+		<link rel="stylesheet" href="../res/fonts/font-awesome-4.6.3/css/font-awesome.min.css">						
+<!--		<link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet"> -->
+			
+		<script src="../res/jsonData/categories.js"></script>
+		<script src="../res/jsonData/bedroom_and_storage.js"></script>
+		<script src="../res/jsonData/living_room.js"></script>
+		<script src="../res/jsonData/dining_room.js"></script>
+		<script src="../res/jsonData/display_and_decors.js"></script>
+		<script src="../utils/scripts/variables.js"></script>
+		<script src="../utils/scripts/DecimalFormat.js"></script>
+		<script src="../utils/scripts/aekieFunctions.js"></script>
+		<script src="../utils/scripts/dataExtract.js"></script>
+		<script src="../utils/scripts/setup.js"></script>
+		
+		<style>
+			.itemBox img { height: 250px; }
+			.itemInfo .oldPrice { padding-left: 0; }
+		</style>
+		
+	</head>
+	
+	
+	<body>
+	
+		<!-- Message bar (Notification) -->
+		<div id="msgBar"></div>
+	
+		<!-- Cart Section -->
+		<div id="cartSection" class="w3-modal"><!-- Cart Section Content --></div>
+	
+		<!-- Navbar (sit on top) -->
+		<div class="w3-top" id="top"><!-- Navbar Content --></div>
+		
+		<!-- Main Content/Grid Layout -->
+		
+		<div class="aekieMainContent w3-container w3-content w3-margin-bottom w3-row">
+
+				<!-- Left Side Nav -->
+				<div class="w3-col l3 w3-padding-right w3-hide-small w3-hide-medium">
+					<!-- Profile -->
+					<div class="w3-card-2 w3-container w3-content w3-round-medium w3-white categorySection">
+					  <header class="w3-xlarge w3-container w3-margin-top w3-border-bottom border-theme-orange" style="text-transform: bold;">Categories</header>
+						<div id="categoryList"></div>
+					</div>
+				</div>
+				
+			<!-- Center Product List -->	
+			<span id="prodListLabel" class="w3-xlarge w3-tag w3-wide animated slideInRight"><!-- Categery Product Label --></span>
+			
+			<div id="itemInfoSection" class="w3-col l9 w3-padding w3-margin-top">				
+									
+				<!-- Product Name, Image, Price Side -->				
+				<div class="w3-half w3-padding">
+					<div class="itemInfo w3-border w3-xlarge"></div>
+				</div>
+				
+				<!-- Product Description, Quantity, Add cart Side -->				
+				<div class="w3-half w3-padding w3-text-black" ></div>				
+								
+				<!-- Related Products Section -->				
+				<div class="itemList itemGrid w3-row-padding w3-margin-top w3-border-top w3-border-bottom"></div>	
+
+			</div>
+			
+		</div>
+		
+		<!-- Footer -->
+		<footer class="w3-dark-grey w3-padding-48" id="footer"><!-- Footer Content --></footer>
+		 
+		 
+<!-- Script -->		
+		<script>						
+			window.onload = function() {				
+				setUpDefaultNavBar();
+				setUpFooter();
+				setUpConfig();
+				setUpCategoryList();
+				setProdInfo();
+			}
+		</script>
+
+	</body>
+	
+</html>
