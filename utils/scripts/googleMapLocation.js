@@ -7,7 +7,7 @@ function myMap() {
   marker.setMap(map);
 
   var infowindow = new google.maps.InfoWindow({
-    content: "<strong>Aekie Home Furnitures - Main Office</strong><br>Unit 33, Silica St., GreenDays, Makati City<br>"
+    content: "<strong>Aekie Home Furnitures - Main Office</strong><br>Unit 33, Silica St., Gil Puyat Ave., Makati City<br>"
   });
   infowindow.open(map,marker);
 }

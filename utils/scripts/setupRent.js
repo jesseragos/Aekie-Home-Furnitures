@@ -1,3 +1,17 @@
+window.onload = function() {
+			
+	var modal = document.getElementById('rentCartSection');
+	window.onclick = function(event) {
+	  if (event.target == modal) {
+		modal.style.display = "none";
+	  }
+	}
+		setUpDefaultNavBar();
+		setUpFooter();
+		setUpConfig();				
+		determineRentContent();
+}
+
 var furnitures = getAllFurnitures(), categories = getCategories();
 
 function setUpRentPage() {	
@@ -53,7 +67,7 @@ function setUpRentPage() {
 									' <div class="w3-card-8 itemBox"> ' +
 										' <a href="'+(getRentHTMLfile()+'?rentinfodata='+([catTag, furnTag[1], prodTag].join("_")))+'">' +
 											' <div class="w3-btn w3-display-topleft w3-large theme-lime" onclick="addToRentCartDirect(['+catTag+', '+furnTag[1]+', '+prodTag+']); return false;"><i class="fa fa-cart-plus"></i></div> ' +
-											' <img src="../res/images/products/'+item.image+'" > ' +
+											' <img src="./res/images/products/'+item.image+'" > ' +
 											' <div class="w3-container"> ' +
 												' <p>'+item.prodName+'</p>  ' +
 												' <p> ' +
@@ -97,14 +111,14 @@ function setRentProdInfo(itemTags) {
 			
 				' <div class="w3-center w3-border-black w3-padding">'+item.prodName+'</div> ' +
 				' <div class="itemInfoImg w3-hover-opacity" onclick="document.getElementById(&quot;imgLarge&quot;).style.display = &quot; block &quot;"> ' +
-					' <img src="../res/images/products/'+item.image+'" class="w3-card-4 w3-border"> ' +
+					' <img src="./res/images/products/'+item.image+'" class="w3-card-4 w3-border"> ' +
 					' <div class="w3-display-topleft w3-tag w3-light-grey w3-small">Click to enlarge</div> ' +	
 				' </div> ' +
 				
 				' <div id="imgLarge" class="w3-modal" onclick="this.style.display=&quot; none &quot;"> ' +
 					' <span class="w3-closebtn w3-hover-grey w3-red w3-container w3-margin w3-display-topright">&times;</span> ' +
 					' <div class="w3-modal-content w3-animate-zoom"> ' +
-						' <img src="../res/images/products/'+item.image+'"> ' +
+						' <img src="./res/images/products/'+item.image+'"> ' +
 					' </div> ' +
 				' </div> ' +
 				
@@ -279,7 +293,7 @@ function updateRentCart() {
 				content += '' +	
 				' <tr> ' +
 					' <td><div class="w3-closebtn w3-hover-text-red" onclick="removeItemFromRent('+i+');">&times;</div></td> ' +
-					' <td><img src="../res/images/products/'+item.image+'"></td> ' +
+					' <td><img src="./res/images/products/'+item.image+'"></td> ' +
 					' <td><div><a href="'+(getRentHTMLfile()+'?rentinfodata='+([itemTags[0], itemTags[1], itemTags[2]].join("_")))+' " class="w3-hover-text-red">'+item.prodName+'</a></div></td> ' +
 					' <td> ' +
 						' <span id="itemQuantityBox"> ' +

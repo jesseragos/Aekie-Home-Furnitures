@@ -31,7 +31,7 @@ function getProducts(furniture) {
 
 function getAllProducts() {
 		var furnitures = getAllFurnitures(),
-		products = new Array();
+		products = [];
 		
 		for(var i in furnitures)
 			for(var j in furnitures[i])
@@ -127,7 +127,7 @@ function setInfo_AboutAekie() {
 	devInfoSection = document.createElement('div'),
 	devInfoHeader = document.createElement('h2'),
 	animateCSS = document.createElement('link'),
-	divQuarter, divImg, devMsg, devImg, devName, devPosition;	
+	divMarginBottom, divImg, devMsg, devImg, devName, devPosition;	
 	
 	animateCSS.rel = "stylesheet";
 	animateCSS.href = "../utils/stylesheets/animate.css";
@@ -141,19 +141,19 @@ function setInfo_AboutAekie() {
 	mapLocation.className = "w3-card-4";
 	mapLocation.style = "width:100%;height:400px";
 	
-	googleMapLocation.src = "../utils/scripts/googleMapLocation.js";
+	googleMapLocation.src = "./utils/scripts/googleMapLocation.js";
 	maps_googleapis.src = "https://maps.googleapis.com/maps/api/js?callback=myMap";
 	
 	//	Set developer info
 	devInfoSection.className = "w3-container w3-padding-64 w3-center";
 	devInfoHeader.className = "w3-padding w3-topbar";
-	devInfoHeader.innerHTML = "The team behind this site";
+	devInfoHeader.innerHTML = "Developer behind the site";
 	
 	devInfoSection.appendChild(devInfoHeader);
 	
 	for(var i in developers) {
-		divQuarter = document.createElement('div');
-		divQuarter.className = "w3-quarter w3-margin-bottom";
+		divMarginBottom = document.createElement('div');
+		divMarginBottom.className = "w3-margin-bottom";
 		
 		divImg = document.createElement('div');
 		devMsg = document.createElement('span');
@@ -167,10 +167,10 @@ function setInfo_AboutAekie() {
 		devName = document.createElement('h3');
 		devPosition = document.createElement('span');
 		
-		devImg.src = "../res/images/" + developers[i].image;
+		devImg.src = "./res/images/" + developers[i].image;
 		divImg.id = "devImg"+i;
 		devImg.alt = developers[i].name;
-		devImg.style.width = "45%";
+		// devImg.style.width = "45%";
 		devImg.className = "w3-circle w3-hover-opacity w3-animate-right";
 		
 		divImg.appendChild(devMsg);
@@ -180,11 +180,11 @@ function setInfo_AboutAekie() {
 		devName.innerHTML = developers[i].name;
 		devPosition.innerHTML = developers[i].position;
 				
-		divQuarter.appendChild(divImg);
-		divQuarter.appendChild(devName);
-		divQuarter.appendChild(devPosition);
+		divMarginBottom.appendChild(divImg);
+		divMarginBottom.appendChild(devName);
+		divMarginBottom.appendChild(devPosition);
 		
-		devInfoSection.appendChild(divQuarter);		
+		devInfoSection.appendChild(divMarginBottom);		
 	}
 	
 	infoBody.appendChild(animateCSS);

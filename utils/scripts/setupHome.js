@@ -29,7 +29,7 @@ function setUpHotFeatsContent() {
 										' <div class="w3-tag w3-display-topleft w3-large w3-black">Out of stock</div> '
 									) +
 									(item.sale? '<div class="w3-badge w3-display-topright w3-yellow w3-xlarge">'+getSaleFormat(item.sale)+'</div>':'') + 
-									' <img src=../res/images/products/'+item.image+'> ' +
+									' <img src="./res/images/products/'+item.image+'"> ' +
 									' <div class="w3-container"> ' +
 										' <p>'+item.prodName+'</p> ' +
 										' <p>' +
@@ -66,11 +66,11 @@ function setUpOnSaleContent() {
 		' <div class="w3-card-8 itemBox"> ' +
 		' <a href="' + getProdInfoHTMLfile() + catTag + '_' + furnTag[1] + '_' + prodTag + ' ">' +
 			(item.stock? 
-								' <div class="w3-btn w3-ripple w3-display-topleft w3-large theme-lime" onclick="addToCartDirect(['+catTag+', '+furnTag[1]+', '+prodTag+']); return false;"><i class="fa fa-cart-plus"></i></div> ' :
-								' <div class="w3-tag w3-display-topleft w3-large w3-black">Out of stock</div> '
+				' <div class="w3-btn w3-ripple w3-display-topleft w3-large theme-lime" onclick="addToCartDirect(['+catTag+', '+furnTag[1]+', '+prodTag+']); return false;"><i class="fa fa-cart-plus"></i></div> ' :
+				' <div class="w3-tag w3-display-topleft w3-large w3-black">Out of stock</div> '
 			) +
 			' <div class="w3-badge w3-display-topright w3-yellow w3-xxlarge">'+getSaleFormat(item.sale)+'</div>' + 
-			' <img src=../res/images/products/'+item.image+'> ' +
+			' <img src="./res/images/products/'+item.image+'"> ' +
 			' <div class="w3-container"> ' +
 				' <p>'+item.prodName+'</p> ' +
 				' <p>' +
@@ -108,7 +108,7 @@ function setUpTopSellerContent() {
 					' <div class="w3-tag w3-display-topleft w3-large w3-black">Out of stock</div> '
 				) +
 					(item.sale? '<div class="w3-badge w3-display-topright w3-yellow w3-xxlarge">'+getSaleFormat(item.sale)+'</div>':'') + 
-					' <img src=../res/images/products/'+item.image+'> ' +
+					' <img src="./res/images/products/'+item.image+'"> ' +
 					' <div class="w3-container"> ' +
 						' <p class="prodName">'+item.prodName+'</p> ' +
 						' <p>' +
@@ -150,7 +150,7 @@ function setUpNewReleaseContent() {
 					' <div class="w3-tag w3-display-topleft w3-large w3-black">Out of stock</div> '
 				) +
 					(item.sale? '<div class="w3-badge w3-display-topright w3-yellow w3-xxlarge">'+getSaleFormat(item.sale)+'</div>':'') + 
-					' <img src=../res/images/products/'+item.image+'> ' +
+					' <img src="./res/images/products/'+item.image+'"> ' +
 					' <div class="w3-container"> ' +
 						' <p>'+item.prodName+'</p> ' +
 						' <p>' +

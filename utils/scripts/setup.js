@@ -394,7 +394,7 @@ function setProdInfo() {
 						
 							' <div class="w3-center w3-border-black w3-padding">'+item.prodName+'</div> ' +
 							' <div class="itemInfoImg w3-hover-opacity" onclick="document.getElementById(&quot;imgLarge&quot;).style.display = &quot; block &quot;"> ' +
-								' <img src="../res/images/products/'+item.image+'" class="w3-card-4 w3-border"> ' +
+								' <img src="./res/images/products/'+item.image+'" class="w3-card-4 w3-border"> ' +
 								(item.sale? ' <div class="w3-display-topright w3-badge w3-yellow w3-xxlarge">'+getSaleFormat(item.sale)+'</div> ':'' )+	
 								' <div class="w3-display-topleft w3-tag w3-light-grey w3-small">Click to enlarge</div> ' +	
 							' </div> ' +
@@ -402,7 +402,7 @@ function setProdInfo() {
 							' <div id="imgLarge" class="w3-modal" onclick="this.style.display=&quot; none &quot;"> ' +
 								' <span class="w3-closebtn w3-red w3-hover-grey w3-container w3-margin w3-display-topright">&times;</span> ' +
 								' <div class="w3-modal-content w3-animate-zoom"> ' +
-									' <img src="../res/images/products/'+item.image+'"> ' +
+									' <img src="./res/images/products/'+item.image+'"> ' +
 								' </div> ' +
 							' </div> ' +
 							
@@ -465,7 +465,7 @@ function setProdInfo() {
 											' <div class="w3-tag w3-display-topleft w3-large w3-black">Out of stock</div> '
 										) +
 										(item.sale? '<div class="w3-badge w3-display-topright w3-yellow w3-xlarge">'+getSaleFormat(item.sale)+'</div>':'') + 
-										' <img src="../res/images/products/'+item.image+'" > ' +
+										' <img src="./res/images/products/'+item.image+'" > ' +
 										' <div class="w3-container"> ' +
 											' <p>'+item.prodName+'</p>  ' +
 											' <p> ' +											
@@ -526,7 +526,7 @@ function getCategoryListView(catTag) {
 			content += '' +
 								' <div class="w3-card-8 categoryBox itemBox"> ' +
 								' <a href="' + getCatListHTMLfile() + catTag + '_' + colData[i][j] + '_' + ' ">' +																		
-									' <img alt="category" src="../res/images/category/'+image+'.jpg"> ' +
+									' <img alt="category" src="./res/images/category/'+image+'.jpg"> ' +
 									' <div class="w3-container"> ' +
 										' <p style="float: left;">'+name+'</p>  ' +
 										' <p style="float: right;">'+'('+itemQuantity+')'+'</p>  ' +
@@ -562,7 +562,7 @@ function getProductListView(optCatData) {
 										' <div class="w3-tag w3-display-topleft w3-small w3-black">Out of stock</div> '
 									) +
 									(item.sale? '<div class="w3-badge w3-display-topright w3-yellow w3-xlarge">'+getSaleFormat(item.sale)+'</div>':'') + 
-									' <img src=../res/images/products/'+item.image+'> ' +
+									' <img src=./res/images/products/'+item.image+'> ' +
 									' <div class="w3-container"> ' +
 										' <p>'+item.prodName+'</p> ' +
 										' <p>' +
@@ -635,7 +635,7 @@ function setUpSearchResults() {
 										' <div class="w3-tag w3-display-topleft w3-large w3-black">Out of stock</div> '
 									) +
 									(item.sale? '<div class="w3-badge w3-display-topright w3-yellow w3-xlarge">'+getSaleFormat(item.sale)+'</div>':'') + 
-									' <img src="../res/images/products/'+item.image+'" > ' +
+									' <img src="./res/images/products/'+item.image+'" > ' +
 									' <div class="w3-container"> ' +
 										' <p>'+item.prodName+'</p>  ' +
 										' <p> ' +											
@@ -886,7 +886,7 @@ function updateCart() {
 				content += '' +	
 				' <tr> ' +
 					' <td><div class="w3-closebtn w3-hover-text-red" onclick="removeItemFromCart('+i+')">&times;</div></td> ' +
-					' <td><img src="../res/images/products/'+item.image+'"></td> ' +
+					' <td><img src="./res/images/products/'+item.image+'"></td> ' +
 					' <td><div><a href="' + getProdInfoHTMLfile() + itemTags[0] + '_' + itemTags[1] + '_' + itemTags[2] + ' " class="w3-hover-text-red">'+item.prodName+'</a></div></td> ' +
 					' <td> ' +
 						' <span id="itemQuantityBox"> ' +

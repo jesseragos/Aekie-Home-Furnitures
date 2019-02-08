@@ -1,3 +1,10 @@
+window.onload = function() {
+	setUpDefaultNavBar();
+	setUpFooter();
+	setUpConfig();
+	setUpCheckOutForm();
+}
+
 var isRentTransaction = new RegExp('rent?', 'gi').test(document.location.href);
 
 function setUpCheckOutForm() {

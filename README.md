@@ -6,4 +6,4 @@ CSS library used is W3.CSS
 Google Maps API is also utilized within the About Us page
 
 Instruction:
-  1. Open index in pages (Will update index to be at root)
+  1. Open index.html
