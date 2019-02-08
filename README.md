@@ -1,5 +1,5 @@
 # Aekie Home Furnitures
-A simple stand alone website that utilized front-end including HTML, CSS, and JavaScript
+A simple stand alone mock-up website about a furnitures e-commerce website that utilizes front-end including HTML, CSS, and JavaScript
 
 CSS library used is W3.CSS
 
